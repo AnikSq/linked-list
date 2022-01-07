@@ -31,6 +31,7 @@ class LinkedList
         @head = new_node
         temp_add = @head
         i = 1
+        temp_add.num+= 1 
         while i <= @value
             temp_add.next_node_adder(temp_dup)
             temp_add.next_node.num += 1
@@ -127,13 +128,14 @@ class LinkedList
     end
 end
 
-
 val = LinkedList.new(5)
+
 val.append(7)
 val.append(8)
+val.prepend(10)
 val.append(9)
 val.append(10)
-val.prepend(9)
-val.prepend(2)
-p val.pop
+val.append(9)
+val.append(6)
+val.append(2)
 p val.to_s
